@@ -1,10 +1,14 @@
 package p2pchat;
 
+import javax.swing.SwingUtilities;
+
 public class P2PChat {
 
     public static void main(String[] args) {
-        MainForm mf = new MainForm();
-        mf.setVisible(true);
+        SwingUtilities.invokeLater(() -> {
+            MainForm mf = new MainForm();
+            mf.setVisible(true);
+        });
     }
     
 }
